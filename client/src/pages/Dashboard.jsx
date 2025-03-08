@@ -42,7 +42,7 @@ const Dashboard = () => {
   };
 
   const handleShareArticle = (id) => {
-    navigator.clipboard.writeText(`http://localhost:5173/news/${id}`);
+    navigator.clipboard.writeText(`https://newssence-assignment.vercel.app/news/${id}`);
     toast({ title: "Link copied", description: "Article link has been copied to clipboard" });
   };
 
