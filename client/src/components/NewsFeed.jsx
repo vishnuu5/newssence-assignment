@@ -21,7 +21,7 @@ const NewsFeed = ({ onSaveArticle }) => {
       try {
         setLoading(true);
         const token = localStorage.getItem("token");
-        const response = await fetch("http://localhost:5000/api/news", {
+        const response = await fetch("https://newssence-assignment-backend.onrender.com/api/news", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -51,7 +51,7 @@ const NewsFeed = ({ onSaveArticle }) => {
       if (!article) return;
 
       const token = localStorage.getItem("token");
-      const response = await fetch(`http://localhost:5000/api/news/${id}/save`, {
+      const response = await fetch(`https://newssence-assignment-backend.onrender.com/api/news/${id}/save`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -84,7 +84,7 @@ const NewsFeed = ({ onSaveArticle }) => {
   };
 
   const handleShareArticle = (id) => {
-    navigator.clipboard.writeText(`http://localhost:5173/news/:${id}`);
+    navigator.clipboard.writeText(`https://newssence-assignment.vercel.app//news/:${id}`);
     toast({
       title: "Link copied",
       description: "Article link has been copied to clipboard",
