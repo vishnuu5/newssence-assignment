@@ -22,7 +22,7 @@ const PreferencesForm = () => {
     const fetchPreferences = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await fetch("http://localhost:5000/api/preferences", {
+        const response = await fetch("https://newssence-assignment-backend.onrender.com/api/preferences", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -51,7 +51,7 @@ const PreferencesForm = () => {
     try {
       setLoading(true);
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:5000/api/preferences", {
+      const response = await fetch("https://newssence-assignment-backend.onrender.com/api/preferences", {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${token}`,
