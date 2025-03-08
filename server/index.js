@@ -28,6 +28,13 @@ app.use('/api/auth', authRoutes);
 app.use('/api/news', newsRoutes);
 app.use('/api/preferences', preferencesRoutes);
 
+app.get("/", (req, res)=> {
+  res.send({
+    activestatus:true,
+    error:false
+  })
+})
+
 // Health check route
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok' });
