@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["./src/*"]
+      },
+      "checkJs": false,
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": false
+    }
+  }
+  
